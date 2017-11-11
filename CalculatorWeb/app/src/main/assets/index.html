@@ -1,0 +1,53 @@
+
+<!-- saved from url=(0032)http://172.16.7.33/android_test/ -->
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <script type="text/javascript">
+    
+        function addNum(num) 
+        {
+            //window.alert("test num");
+			var display=document.getElementById("res");
+			var numResult=Android.addNum(num,display.value);
+            display.value+=numResult;
+        }
+        function addOperator(opr) {
+            //window.alert("test opr"); 
+            var display=document.getElementById("res");
+            var oprResult=Android.addOperator(opr,display.value);
+            display.value=oprResult;
+        }
+        function getResult() {
+        	 //window.alert("test res");
+            var display=document.getElementById("res");
+        	var result=Android.getResult(display.value);
+        	display.value=result;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="" id="res" name="res" >
+    <br>
+    <input type="button" value="1" onclick="addNum(1)">
+    <input type="button" value="2" onclick="addNum(2)">
+    <input type="button" value="3" onclick="addNum(3)">
+    <input type="button" value="+" onclick="addOperator('+')">
+    <br>
+    <input type="button" value="4" onclick="addNum(4)">
+    <input type="button" value="5" onclick="addNum(5)">
+    <input type="button" value="6" onclick="addNum(6)">
+    <input type="button" value="-" onclick="addOperator('-')">
+    <br>
+    <input type="button" value="7" onclick="addNum(7)">
+    <input type="button" value="8" onclick="addNum(8)">
+    <input type="button" value="9" onclick="addNum(9)">
+    <input type="button" value="*" onclick="addOperator('*')">
+    <br>
+    <input type="button" value="." onclick="addNum('.')">
+    <input type="button" value="0" onclick="addNum(0)">
+    <input type="button" value="=" onclick="getResult()">
+    <input type="button" value="/" onclick="addOperator('/')">
+    <br>
+    
+
+</body></html>
